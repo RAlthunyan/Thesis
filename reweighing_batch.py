@@ -1,6 +1,3 @@
-# insert the directory ColabNotebooks to my python path using sys:
-
-
 import numpy as np
 import random
 from numpy.random import seed
