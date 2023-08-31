@@ -264,9 +264,6 @@ def generating_dataset(noise_rate=0):
     x_train = x_train.reshape(x_train.shape[0], image_vector_size)
     x_test = x_test.reshape(x_test.shape[0], image_vector_size)
 
-    # Normalize the images
-    x_train, x_test = x_train / 255.0, x_test / 255.0
-
     # Asymmetrical flip
     if noise_rate != 0:
         np.random.seed(2)
