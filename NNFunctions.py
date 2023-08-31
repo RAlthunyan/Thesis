@@ -23,7 +23,7 @@ class LossFuncs:
         return ce
 
     def Batch_CE(self, y, a_n):
-        # to avoid of taking the logarithm of zero, we add s small constant epsilon 1e-15
+        # to avoid taking the logarithm of zero, we add s small constant epsilon 1e-15
         ce = np.sum(np.multiply(y, np.log(a_n + self.epsilon)))
         l_ind = np.sum(-np.multiply(y, np.log(a_n + self.epsilon)), axis=1)  # return a vector of size (y.shape[0],1)
         l = -(1. / y.shape[0]) * ce
