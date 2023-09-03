@@ -38,8 +38,8 @@ class NeuralNetwork:
             output_error = dl/dA_o
             output_delta = output_error * dA_o/dz_o
 
-            so, dl/dw_o = l_r * (1/N) *A_h * output_delta.T and
-            dl/db_o = l_r * (1/N)* ∑(output_delta_ij) along axis 0
+            so, dl/dw_o = l_r * A_h * output_delta.T and
+            dl/db_o = l_r * ∑(output_delta_ij) along axis 0
 
             ------------------------------------------------------
             derivative of loss function w.r.t hidden layer weights and biases
@@ -49,8 +49,8 @@ class NeuralNetwork:
             hidden_error = output_delta * dz_o/dA_h
             hidden_delta = hidden_error * dA_h/dz_h
 
-            so, dl/dw_h = l_r * (1/N)* x.T * hidden_delta,  and
-            dl/db_h = l_r * (1/N)* ∑(hidden_delta_ij) along axis 0
+            so, dl/dw_h = l_r * x.T * hidden_delta,  and
+            dl/db_h = l_r * ∑(hidden_delta_ij) along axis 0
 
         """
 
