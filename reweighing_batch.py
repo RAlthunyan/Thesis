@@ -186,10 +186,8 @@ class Network:
                     self.samples_weights, counter = ws_c("generate_sample_weights_3",
                                                          train_indiv_losses[epoch - 9:epoch + 1, :], round, counter)
 
-                EMA_L = np.zeros(shape=(self.N, 1), dtype=np.float32)
-
-                print("sum of noisy weights: {:.11f}".format(np.average(self.samples_weights[N_indxs])))
-                print("sum of typical weights: {:.11f}".format(np.average(self.samples_weights[T_indxs])))
+                print("Average of noisy weights: {:.11f}".format(np.average(self.samples_weights[N_indxs])))
+                print("Average of typical weights: {:.11f}".format(np.average(self.samples_weights[T_indxs])))
             else:
                 pass
 
